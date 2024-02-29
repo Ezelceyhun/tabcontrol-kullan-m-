@@ -26,7 +26,7 @@ namespace tabcontrol_kullanımı
         //TabPage myTabPage = new TabPage();
         private void button1_Click(object sender, EventArgs e)
         {
-            string title = "Sekme " + (tabControl1.TabCount + 1).ToString();
+            string title = "Sekme " + (tabControl1.TabCount + 1).ToString() + "  ";
             TabPage myTabPage = new TabPage();      
             if (tabControl1.TabCount == 0)
             {
@@ -51,7 +51,7 @@ namespace tabcontrol_kullanımı
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string title = "Sekme " + (tabControl1.TabCount + 1).ToString();
+            string title = "Sekme " + (tabControl1.TabCount + 1).ToString() + "  ";
             TabPage myTabPage = new TabPage();
             if (tabControl1.TabCount == 1)
             {
@@ -76,7 +76,7 @@ namespace tabcontrol_kullanımı
 
         private void Anasayfa_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace tabcontrol_kullanımı
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string title = "Sekme " + (tabControl1.TabCount + 1).ToString();
+            string title = "Sekme " + (tabControl1.TabCount + 1).ToString() + "  ";
             TabPage myTabPage = new TabPage();
             if (tabControl1.TabCount == 2)
             {
@@ -110,7 +110,7 @@ namespace tabcontrol_kullanımı
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string title = "Sekme " + (tabControl1.TabCount + 1).ToString();
+            string title = "Sekme " + (tabControl1.TabCount + 1).ToString() + "  ";
             TabPage myTabPage = new TabPage();
             if (tabControl1.TabCount == 3)
             {
@@ -131,32 +131,7 @@ namespace tabcontrol_kullanımı
             {
                 MessageBox.Show("hata");
             }
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            if(tabControl1.SelectedIndex == 0)
-            {
-                form1.Hide();
-            }
-            else if(tabControl1.SelectedIndex == 1) 
-            {
-                form2.Hide();
-            }
-            else if(tabControl1.SelectedIndex == 2)
-            {
-                form3.Hide();
-            }
-            else if(tabControl1.SelectedIndex == 3)
-            {
-                form4.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Kapatmak İstediğiniz Sekmeyi Seçin!");
-            }
-
-        }
+        }     
 
         private void button6_Click(object sender, EventArgs e)
         {
@@ -192,6 +167,34 @@ namespace tabcontrol_kullanımı
             else
             {
                 MessageBox.Show("Kapatmak İstediğiniz Sekmeyi Seçin!");
+            }
+        }
+
+        private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            e.Graphics.DrawString(" ", e.Font, Brushes.Black, e.Bounds.Right - 15, e.Bounds.Top + 4);
+            e.Graphics.DrawString(this.tabControl1.TabPages[e.Index].Text, e.Font, Brushes.Black, e.Bounds.Left + 12, e.Bounds.Top + 4);
+            e.DrawFocusRectangle(); 
+        }
+
+        private void tabControl1_MouseDown(object sender, MouseEventArgs e)
+        {
+        }
+
+        private void tabControl1_MouseClick(object sender, MouseEventArgs e)
+        {
+            for (int i = 0; i < this.tabControl1.TabPages.Count; i++)
+            {
+                Rectangle r = tabControl1.GetTabRect(i);
+                Rectangle closeButton = new Rectangle(r.Right - 15, r.Top + 4, 9, 7);
+                if (closeButton.Contains(e.Location))
+                {
+                    if (MessageBox.Show("Bu Sekmeyi Kapatmak Üzeresin. Kapatılsın Mı?", "Uyarı !", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        this.tabControl1.TabPages.RemoveAt(i);
+                        break;
+                    }
+                }
             }
         }
     }
