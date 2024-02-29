@@ -12,3 +12,17 @@ C:\Users\ezelc\Desktop\tabcontrol kullanımı\obj\Debug\tabcontrol_kullanımı.F
 C:\Users\ezelc\Desktop\tabcontrol kullanımı\obj\Debug\tabcontrol_kullanımı.Form2.resources
 C:\Users\ezelc\Desktop\tabcontrol kullanımı\obj\Debug\tabcontrol_kullanımı.Form3.resources
 C:\Users\ezelc\Desktop\tabcontrol kullanımı\obj\Debug\tabcontrol_kullanımı.Form4.resources
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\tabcontrol kullanımı.exe.config
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\tabcontrol kullanımı.exe
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\tabcontrol kullanımı.pdb
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol kullanımı.csproj.AssemblyReference.cache
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol_kullanımı.Anasayfa.resources
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol_kullanımı.Form1.resources
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol_kullanımı.Form2.resources
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol_kullanımı.Form3.resources
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol_kullanımı.Form4.resources
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol_kullanımı.Properties.Resources.resources
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol kullanımı.csproj.GenerateResource.cache
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol kullanımı.csproj.CoreCompileInputs.cache
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol kullanımı.exe
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol kullanımı.pdb
