@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ezelc\\Desktop\\tabcontrol kullan\u0131m\u0131\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{94947164-0C06-4DFB-95B7-DED7B70F68E1}|tabcontrol kullan\u0131m\u0131.csproj|c:\\users\\ezelc\\desktop\\tabcontrol kullan\u0131m\u0131\\anasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{94947164-0C06-4DFB-95B7-DED7B70F68E1}|tabcontrol kullan\u0131m\u0131.csproj|solutionrelative:anasayfa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94947164-0C06-4DFB-95B7-DED7B70F68E1}|tabcontrol kullan\u0131m\u0131.csproj|c:\\users\\ezelc\\desktop\\tabcontrol kullan\u0131m\u0131\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{94947164-0C06-4DFB-95B7-DED7B70F68E1}|tabcontrol kullan\u0131m\u0131.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\ezelc\\Desktop\\tabcontrol kullan\u0131m\u0131\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\ezelc\\Desktop\\tabcontrol kullan\u0131m\u0131\\Form1.cs [Tasar\u0131m]",
+              "RelativeToolTip": "Form1.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T08:29:16.08Z",
+              "EditorCaption": " [Tasar\u0131m]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Anasayfa.cs [Tasar\u0131m]",
+              "DocumentMoniker": "C:\\Users\\ezelc\\Desktop\\tabcontrol kullan\u0131m\u0131\\Anasayfa.cs",
+              "RelativeDocumentMoniker": "Anasayfa.cs",
+              "ToolTip": "C:\\Users\\ezelc\\Desktop\\tabcontrol kullan\u0131m\u0131\\Anasayfa.cs [Tasar\u0131m]",
+              "RelativeToolTip": "Anasayfa.cs [Tasar\u0131m]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-29T08:28:57.942Z",
+              "EditorCaption": " [Tasar\u0131m]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
