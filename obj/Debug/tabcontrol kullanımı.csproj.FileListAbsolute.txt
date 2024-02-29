@@ -26,3 +26,5 @@ C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcont
 C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol kullanımı.csproj.CoreCompileInputs.cache
 C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol kullanımı.exe
 C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol kullanımı.pdb
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\Guna.UI2.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontr.D8CBE142.Up2Date

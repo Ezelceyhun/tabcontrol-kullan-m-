@@ -170,5 +170,29 @@ namespace tabcontrol_kullanımı
             form3.Hide();
             form4.Hide();
         }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedIndex == 0)
+            {
+                form1.Hide();
+            }
+            else if (tabControl1.SelectedIndex == 1)
+            {
+                form2.Hide();
+            }
+            else if (tabControl1.SelectedIndex == 2)
+            {
+                form3.Hide();
+            }
+            else if (tabControl1.SelectedIndex == 3)
+            {
+                form4.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Kapatmak İstediğiniz Sekmeyi Seçin!");
+            }
+        }
     }
 }
