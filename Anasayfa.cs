@@ -29,8 +29,7 @@ namespace tabcontrol_kullanımı
             string title = "Sekme " + (tabControl1.TabCount).ToString();
             TabPage myTabPage = new TabPage();      
             if (tabControl1.TabCount == 1)
-            {
-                
+            {             
                 form1.MdiParent = this;
                 myTabPage.Text = title;
                 tabControl1.TabPages.Add(myTabPage);
@@ -45,38 +44,40 @@ namespace tabcontrol_kullanımı
             }
             else
             {
-                MessageBox.Show("hata");
+                MessageBox.Show("Sekmeleri Sırası İle Ekleyiniz !");
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string title = "Sekme " + (tabControl1.TabCount).ToString();
-            TabPage myTabPage = new TabPage();
-            if (tabControl1.TabCount == 2)
+            if (tabControl1.TabCount != 1)
             {
-                
-                form2.MdiParent = this;
-                myTabPage.Text = title;
-                tabControl1.TabPages.Add(myTabPage);               
-                tabControl1.SelectedIndex = 2;
-                form2.Show();
-                myTabPage.Controls.Add(form2);
-            }
-            else if (myTabPage != null)
-            {
-                tabControl1.SelectedIndex = 2;
-                form2.Show();
+
+                string title = "Sekme " + (tabControl1.TabCount).ToString();
+                TabPage myTabPage = new TabPage();
+                if (tabControl1.TabCount == 2)
+                {
+                    form2.MdiParent = this;
+                    myTabPage.Text = title;
+                    tabControl1.TabPages.Add(myTabPage);
+                    tabControl1.SelectedIndex = 2;
+                    form2.Show();
+                    myTabPage.Controls.Add(form2);
+                }
+                else if (myTabPage != null)
+                {
+                    tabControl1.SelectedIndex = 2;
+                    form2.Show();
+                }
+
             }
             else
             {
-                MessageBox.Show("hata");
+                MessageBox.Show("Sekmeleri Sırası İle Ekleyiniz !");
             }
         }
         private void Anasayfa_Load(object sender, EventArgs e)
         {
-            
-
         }
         //global sekme_id değişkeni
         int sekme_id;
@@ -103,9 +104,13 @@ namespace tabcontrol_kullanımı
             }
             else if (tabControl1.SelectedIndex == 0)
             {
-                if (sekme_id != null)
+                if (sekme_id > 0)
                 {
                     this.tabControl1.TabPages.RemoveAt(sekme_id);
+                }
+                else
+                {
+                    MessageBox.Show("Tümü Kapatıldı !");
                 }
             }
             else
@@ -116,51 +121,55 @@ namespace tabcontrol_kullanımı
 
         private void button3_Click(object sender, EventArgs e)
         {
-            string title = "Sekme " + (tabControl1.TabCount).ToString();
-            TabPage myTabPage = new TabPage();
-            if (tabControl1.TabCount == 3)
+            if (tabControl1.TabCount != 2 && tabControl1.TabCount != 1)
             {
-
-                form3.MdiParent = this;
-                myTabPage.Text = title;
-                tabControl1.TabPages.Add(myTabPage);
-                tabControl1.SelectedIndex = 3;
-                form3.Show();
-                myTabPage.Controls.Add(form3);
-            }
-            else if (myTabPage != null)
-            {
-                tabControl1.SelectedIndex = 3;
-                form3.Show();
+                string title = "Sekme " + (tabControl1.TabCount).ToString();
+                TabPage myTabPage = new TabPage();
+                if (tabControl1.TabCount == 3)
+                {
+                    form3.MdiParent = this;
+                    myTabPage.Text = title;
+                    tabControl1.TabPages.Add(myTabPage);
+                    tabControl1.SelectedIndex = 3;
+                    form3.Show();
+                    myTabPage.Controls.Add(form3);
+                }
+                else if (myTabPage != null)
+                {
+                    tabControl1.SelectedIndex = 3;
+                    form3.Show();
+                }
             }
             else
             {
-                MessageBox.Show("hata");
+                MessageBox.Show("Sekmeleri Sırası İle Ekleyiniz !");
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string title = "Sekme " + (tabControl1.TabCount).ToString();
-            TabPage myTabPage = new TabPage();
-            if (tabControl1.TabCount == 4)
+            if (tabControl1.TabCount != 3 && tabControl1.TabCount !=2 && tabControl1.TabCount != 1)
             {
-
-                form4.MdiParent = this;
-                myTabPage.Text = title;
-                tabControl1.TabPages.Add(myTabPage);
-                tabControl1.SelectedIndex = 4;
-                form4.Show();
-                myTabPage.Controls.Add(form4);
-            }
-            else if (myTabPage != null)
-            {
-                tabControl1.SelectedIndex = 4;
-                form4.Show();
+                string title = "Sekme " + (tabControl1.TabCount).ToString();
+                TabPage myTabPage = new TabPage();
+                if (tabControl1.TabCount == 4)
+                {
+                    form4.MdiParent = this;
+                    myTabPage.Text = title;
+                    tabControl1.TabPages.Add(myTabPage);
+                    tabControl1.SelectedIndex = 4;
+                    form4.Show();
+                    myTabPage.Controls.Add(form4);
+                }
+                else if (myTabPage != null)
+                {
+                    tabControl1.SelectedIndex = 4;
+                    form4.Show();
+                }
             }
             else
             {
-                MessageBox.Show("hata");
+                MessageBox.Show("Sekmeleri Sırası İle Ekleyiniz !");
             }
         }     
 
@@ -171,10 +180,12 @@ namespace tabcontrol_kullanımı
 
         private void button7_Click(object sender, EventArgs e)
         {
-            form1.Hide();
-            form2.Hide();
-            form3.Hide();
-            form4.Hide();
+            tabControl1.SelectedIndex = 0;
+            int a = sekme_id - 1;
+            for(int i = a;i>0;i--)
+            {
+                this.tabControl1.TabPages.RemoveAt(i);            
+            }
         }
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
         {        
