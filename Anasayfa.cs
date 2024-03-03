@@ -78,11 +78,17 @@ namespace tabcontrol_kullanımı
         }
         private void Anasayfa_Load(object sender, EventArgs e)
         {
+            this.tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
+            this.tabControl1.Padding = new System.Drawing.Point(CLOSE_SIZE, CLOSE_SIZE);
+            this.tabControl1.DrawItem += new DrawItemEventHandler(this.tabControl1_DrawItem);
+            this.tabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);
+
         }
+        const int CLOSE_SIZE = 15;
         //global sekme_id değişkeni
         int sekme_id;
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        {/*
             //selected indexe göre sekme_id değişir ve selectedIndex 0 ise sekme_id de bulunan sayının bulunduğu
             //sekmeyi kapatır.
             if (tabControl1.SelectedIndex == 1)
@@ -117,7 +123,7 @@ namespace tabcontrol_kullanımı
             {
                 MessageBox.Show("Kapatmak İstediğiniz Sayfaya Gidin !");
             }
-        }
+        */}
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -177,7 +183,6 @@ namespace tabcontrol_kullanımı
         {
             Application.Exit();
         }
-
         private void button7_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
@@ -188,15 +193,69 @@ namespace tabcontrol_kullanımı
             }
         }
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
-        {        
+        {
+            try
+            {
+                Rectangle myTabRect = this.tabControl1.GetTabRect(e.Index);
+
+                e.Graphics.DrawString(this.tabControl1.TabPages[e.Index].Text, this.Font, SystemBrushes.ControlText, myTabRect.X + 2, myTabRect.Y + 2);
+
+                using (Pen p = new Pen(Color.White))
+                {
+                    myTabRect.Offset(myTabRect.Width - (CLOSE_SIZE + 3), 2);
+                    myTabRect.Width = CLOSE_SIZE;
+                    myTabRect.Height = CLOSE_SIZE;
+                    e.Graphics.DrawRectangle(p, myTabRect);
+                }
+
+                // Fill the rectangular box
+                Color recColor = e.State == DrawItemState.Selected ? Color.White : Color.White;
+                using (Brush b = new SolidBrush(recColor))
+                {
+                    e.Graphics.FillRectangle(b, myTabRect);
+                }
+
+                // Painting close symbol
+                using (Pen objpen = new Pen(Color.Black))
+                {
+                    Bitmap bt = new Bitmap("C:\\Users\\ezelc\\Desktop\\Github Projeleri\\tabcontrol kullanımı\\Resources\\close_FILL0_wght400_GRAD0_opsz24.png");
+                    Point p5 = new Point(myTabRect.X, 4);
+                    e.Graphics.DrawImage(bt, p5);
+                }
+                e.Graphics.Dispose();
+            }
+            catch (Exception)
+            { }
         }
 
         private void tabControl1_MouseDown(object sender, MouseEventArgs e)
         {
+            if (e.Button == MouseButtons.Left)
+            {
+                int x = e.X, y = e.Y;
+                Rectangle myTabRect = this.tabControl1.GetTabRect(this.tabControl1.SelectedIndex);
+                myTabRect.Offset(myTabRect.Width - (CLOSE_SIZE + 3), 2);
+                myTabRect.Width = CLOSE_SIZE;
+                myTabRect.Height = CLOSE_SIZE;
+                bool isClose = x > myTabRect.X && x < myTabRect.Right && y > myTabRect.Y && y < myTabRect.Bottom;
+                if (isClose == true)
+                {
+                    this.tabControl1.TabPages.Remove(this.tabControl1.SelectedTab);
+                }
+            }
         }
 
         private void tabControl1_MouseClick(object sender, MouseEventArgs e)
         {          
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
         }
     }
 }

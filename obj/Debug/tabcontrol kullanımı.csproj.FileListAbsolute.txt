@@ -26,3 +26,28 @@ C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcont
 C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol kullanımı.csproj.CoreCompileInputs.cache
 C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol kullanımı.exe
 C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontrol kullanımı.pdb
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\InfragisticsWPF.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\InfragisticsWPF.xml
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\de\InfragisticsWPF.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\es\InfragisticsWPF.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\fr\InfragisticsWPF.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\ja\InfragisticsWPF.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\obj\Debug\tabcontr.D8CBE142.Up2Date
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\nl-BE\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\ezelc\Desktop\Github Projeleri\tabcontrol kullanımı\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
