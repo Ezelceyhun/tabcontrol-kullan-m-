@@ -27,38 +27,34 @@ namespace tabcontrol_kullanımı
         TabPage myTabPage2 = new TabPage();
         TabPage myTabPage3 = new TabPage();
         TabPage myTabPage4 = new TabPage();
-        int a, b, c, d, f;
         private void button1_Click(object sender, EventArgs e)
         {
             //sekme adı ve yeni sekme oluştur
             string title = "Sekme " + (tabControl1.TabCount +1).ToString();          
             button1.AccessibleName = "tabkey1";
-            a = tabControl1.TabCount;
-            if (title == "Sekme 1")
+            if (myTabPage == null)
             {
                 myTabPage.AccessibleName = "tabkey1";
                 form1.MdiParent = this;
                 myTabPage.Text = title;
                 tabControl1.TabPages.Add(myTabPage);
-                tabControl1.SelectedIndex = 0;
-                c = tabControl1.SelectedIndex;
-                a = c;
+                this.myTabPage.Show();
                 form1.Show();
-                myTabPage.Controls.Add(form1);              
+                myTabPage.Controls.Add(form1);
             }
             else if(myTabPage.AccessibleName == "tabkey1")
             {
-                tabControl1.SelectedIndex = c;                
+                myTabPage.Show();      
+                tabControl1.SelectedTab = myTabPage;
                 form1.Show();
             }
-            else if(myTabPage.AccessibleName != button1.AccessibleName)
+            else if(myTabPage.AccessibleName == null)
             {
                 myTabPage.AccessibleName = "tabkey1";
                 form1.MdiParent = this;
                 myTabPage.Text = "Sekme 1";
                 tabControl1.TabPages.Add(myTabPage);
-                c = tabControl1.TabCount -1;
-                tabControl1.SelectedIndex = c;
+                tabControl1.SelectedIndex = tabControl1.TabCount - 1;
                 form1.Show();
                 myTabPage.Controls.Add(form1);
             }
@@ -66,86 +62,69 @@ namespace tabcontrol_kullanımı
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //sekme adı ve yeni sekme oluştur
             string title = "Sekme " + (tabControl1.TabCount + 1).ToString();
-            //a = tabControl1.SelectedIndex;
             button2.AccessibleName = "tabkey2";
-            if (title == "Sekme 2")
+            if (myTabPage == null)
             {
                 myTabPage2.AccessibleName = "tabkey2";
                 form2.MdiParent = this;
                 myTabPage2.Text = title;
                 tabControl1.TabPages.Add(myTabPage2);
-                tabControl1.SelectedIndex = tabControl1.TabCount + 1;
-                tabControl1.SelectedIndex = 1;
-                b = tabControl1.SelectedIndex;
-                a = b;
+                tabControl1.SelectedTab = myTabPage2;
+                this.myTabPage2.Show();
                 form2.Show();
                 myTabPage2.Controls.Add(form2);
             }
             else if (myTabPage2.AccessibleName == "tabkey2")
             {
-                tabControl1.SelectedIndex = b;
+                myTabPage2.Show();
+                tabControl1.SelectedTab = myTabPage2;
                 form2.Show();
             }
-            else if (myTabPage2.AccessibleName != button2.AccessibleName)
+            else if (myTabPage2.AccessibleName == null)
             {
                 myTabPage2.AccessibleName = "tabkey2";
                 form2.MdiParent = this;
                 myTabPage2.Text = "Sekme 2";
                 tabControl1.TabPages.Add(myTabPage2);
-                b = tabControl1.TabCount - 1;
-                tabControl1.SelectedIndex = b;
+                tabControl1.SelectedIndex = tabControl1.TabCount - 1;
                 form2.Show();
                 myTabPage2.Controls.Add(form2);
             }
         }
         private void Anasayfa_Load(object sender, EventArgs e)
-        {
-            /*this.tabControl1.DrawMode = TabDrawMode.OwnerDrawFixed;
-            this.tabControl1.Padding = new System.Drawing.Point(CLOSE_SIZE, CLOSE_SIZE);
-            this.tabControl1.DrawItem += new DrawItemEventHandler(this.tabControl1_DrawItem);
-            this.tabControl1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.tabControl1_MouseDown);*/
-
-        }
-        const int CLOSE_SIZE = 15;
-        //global sekme_id değişkeni
-        int sekme_id;
+        {}
         private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {/*
-            
-        */}
+        {}
 
         private void button3_Click(object sender, EventArgs e)
         {
             string title = "Sekme " + (tabControl1.TabCount + 1).ToString();
             button3.AccessibleName = "tabkey3";
-            if (title == "Sekme 3")
+            if (myTabPage == null)
             {
                 myTabPage3.AccessibleName = "tabkey3";
                 form3.MdiParent = this;
                 myTabPage3.Text = title;
                 tabControl1.TabPages.Add(myTabPage3);
-                tabControl1.SelectedIndex = tabControl1.TabCount + 1;
-                tabControl1.SelectedIndex = 2;
-                d = tabControl1.SelectedIndex;
-                a = d;
+                tabControl1.SelectedTab = myTabPage3;
+                this.myTabPage3.Show();
                 form3.Show();
                 myTabPage3.Controls.Add(form3);
             }
             else if (myTabPage3.AccessibleName == "tabkey3")
             {
-                tabControl1.SelectedIndex = d;
+                myTabPage3.Show();
+                tabControl1.SelectedTab = myTabPage3;
                 form3.Show();
             }
-            else if (myTabPage3.AccessibleName != button3.AccessibleName)
+            else if (myTabPage3.AccessibleName == null)
             {
                 myTabPage3.AccessibleName = "tabkey3";
                 form3.MdiParent = this;
                 myTabPage3.Text = "Sekme 3";
                 tabControl1.TabPages.Add(myTabPage3);
-                d = tabControl1.TabCount - 1;
-                tabControl1.SelectedIndex = d;
+                tabControl1.SelectedIndex = tabControl1.TabCount - 1;
                 form3.Show();
                 myTabPage3.Controls.Add(form3);
             }
@@ -155,32 +134,29 @@ namespace tabcontrol_kullanımı
         {
             string title = "Sekme " + (tabControl1.TabCount + 1).ToString();
             button4.AccessibleName = "tabkey4";
-            if (title == "Sekme 4")
+            if (myTabPage4 == null)
             {
                 myTabPage4.AccessibleName = "tabkey4";
                 form4.MdiParent = this;
                 myTabPage4.Text = title;
                 tabControl1.TabPages.Add(myTabPage4);
-                tabControl1.SelectedIndex = tabControl1.TabCount + 1;
-                tabControl1.SelectedIndex = 3;
-                f = tabControl1.SelectedIndex;
-                a = f;
+                this.myTabPage4.Show();
                 form4.Show();
                 myTabPage4.Controls.Add(form4);
             }
             else if (myTabPage4.AccessibleName == "tabkey4")
             {
-                tabControl1.SelectedIndex = f;
+                myTabPage4.Show();
+                tabControl1.SelectedTab = myTabPage4;
                 form4.Show();
             }
-            else if (myTabPage4.AccessibleName != button4.AccessibleName)
+            else if (myTabPage4.AccessibleName == null)
             {
                 myTabPage4.AccessibleName = "tabkey4";
                 form4.MdiParent = this;
                 myTabPage4.Text = "Sekme 4";
                 tabControl1.TabPages.Add(myTabPage4);
-                f = tabControl1.TabCount - 1;
-                tabControl1.SelectedIndex = f;
+                tabControl1.SelectedIndex = tabControl1.TabCount - 1;
                 form4.Show();
                 myTabPage4.Controls.Add(form4);
             }
@@ -188,17 +164,10 @@ namespace tabcontrol_kullanımı
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+           Application.Exit();
         }
         private void button7_Click(object sender, EventArgs e)
-        {
-            tabControl1.SelectedIndex = 0;
-            int a = sekme_id - 1;
-            for(int i = a;i>0;i--)
-            {
-                this.tabControl1.TabPages.RemoveAt(i);            
-            }
-        }
+        { }
         private void tabControl1_DrawItem(object sender, DrawItemEventArgs e)
         {
             /*try
@@ -266,31 +235,29 @@ namespace tabcontrol_kullanımı
         }
         private void button5_Click_1(object sender, EventArgs e)
         {
-            //selected indexe göre sekme_id değişir ve selectedIndex 0 ise sekme_id de bulunan sayının bulunduğu
-            //sekmeyi kapatır.
-            if (tabControl1.SelectedIndex == c)
+            if (tabControl1.SelectedTab == myTabPage)
             {
-                sekme_id = c;
-                this.tabControl1.TabPages.RemoveAt(sekme_id);
-                myTabPage.AccessibleName = "";
+                int a = tabControl1.SelectedIndex;
+                this.tabControl1.TabPages.RemoveAt(a);
+                myTabPage.AccessibleName = null;
             }
-            else if (tabControl1.SelectedIndex == b)
+            else if (tabControl1.SelectedTab == myTabPage2)
             {
-                sekme_id = b;
-                this.tabControl1.TabPages.RemoveAt(sekme_id);
-                myTabPage2.AccessibleName = "";
+                int a = tabControl1.SelectedIndex;
+                this.tabControl1.TabPages.RemoveAt(a);
+                myTabPage2.AccessibleName = null;
             }
-            else if (tabControl1.SelectedIndex == d)
+            else if (tabControl1.SelectedTab == myTabPage3)
             {
-                sekme_id = d;
-                this.tabControl1.TabPages.RemoveAt(sekme_id);
-                myTabPage3.AccessibleName = "";
+                int a = tabControl1.SelectedIndex;
+                this.tabControl1.TabPages.RemoveAt(a);
+                myTabPage3.AccessibleName = null;
             }
-            else if (tabControl1.SelectedIndex == f)
+            else if (tabControl1.SelectedTab == myTabPage4)
             {
-                sekme_id = f;
-                this.tabControl1.TabPages.RemoveAt(sekme_id);
-                myTabPage4.AccessibleName = "";
+                int a = tabControl1.SelectedIndex;
+                this.tabControl1.TabPages.RemoveAt(a);
+                myTabPage4.AccessibleName = null;
             }
             else
             {
